@@ -19,9 +19,11 @@ RUN yum -y update; yum clean all; \
 # Install requirements.
 RUN yum -y install rpm centos-release dnf-plugins-core \
  && yum -y config-manager --set-enabled powertools \
+ && yum -y update \
  && yum -y install \
       sudo \
       which \
+      ca-certificates \
  && yum clean all
 
 # Disable requiretty.
