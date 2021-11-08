@@ -23,6 +23,8 @@ RUN yum -y install rpm centos-release dnf-plugins-core \
  && yum -y install \
       sudo \
       which \
+      hostname \
+      procps-ng \
       ca-certificates \
  && yum clean all
 
